@@ -30,6 +30,7 @@ suites:
   - name: default
     run_list:
       - recipe[task3_database::default]
+      - recipe[ingenerator-mysql::dev_db]
     verifier:
       inspec_tests:
         - test/smoke/default
