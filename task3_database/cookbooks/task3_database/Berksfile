@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+source 'https://supermarket.chef.io'
+source 'https://chef-supermarket.ingenerator.com'
+metadata
+
+cookbook 'ingenerator-mysql', '~>0.4.0'
