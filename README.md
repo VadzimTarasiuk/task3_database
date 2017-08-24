@@ -25,3 +25,7 @@
 ### Checkout: all works nominal:
 
 <img src="1-5.png">
+
+### Tests on JBoss with MySQL:
+
+<img src="1-6.png">
