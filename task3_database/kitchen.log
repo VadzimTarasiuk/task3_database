@@ -1,0 +1,3 @@
+I, [2017-08-24T09:23:31.440267 #1702]  INFO -- Kitchen: -----> Starting Kitchen (v1.17.0)
+I, [2017-08-24T09:23:32.396597 #1702]  INFO -- Kitchen: -----> Converging <default-sbeliakou-centos-73-x86-64-minimal>...
+I, [2017-08-24T09:25:25.553355 #1702]  INFO -- Kitchen: -----> Kitchen is finished. (1m54.11s)

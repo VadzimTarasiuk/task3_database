@@ -1,0 +1,249 @@
+I, [2017-08-24T09:23:32.396675 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: -----> Converging <default-sbeliakou-centos-73-x86-64-minimal>...
+I, [2017-08-24T09:23:32.397119 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Preparing files for transfer
+I, [2017-08-24T09:23:32.397222 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Preparing dna.json
+I, [2017-08-24T09:23:32.397450 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Preparing cookbooks from project directory
+I, [2017-08-24T09:23:32.400761 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Removing non-cookbook files before transfer
+I, [2017-08-24T09:23:32.402504 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Preparing validation.pem
+I, [2017-08-24T09:23:32.402704 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Preparing client.rb
+I, [2017-08-24T09:23:32.543739 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: -----> Installing Chef Omnibus (12.4.1)
+I, [2017-08-24T09:23:32.544017 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Downloading file:///tmp/chef-pkgs/install.sh to file /tmp/install.sh
+I, [2017-08-24T09:23:32.544069 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Trying wget...
+I, [2017-08-24T09:23:32.544221 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Trying curl...
+I, [2017-08-24T09:23:32.544351 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Download complete.
+I, [2017-08-24T09:23:32.895944 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Transferring files to <default-sbeliakou-centos-73-x86-64-minimal>
+I, [2017-08-24T09:23:35.097046 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Starting Chef Client, version 13.3.42
+I, [2017-08-24T09:23:36.281677 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: resolving cookbooks for run list: ["task3_database::default"]
+I, [2017-08-24T09:23:36.345730 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Synchronizing Cookbooks:
+I, [2017-08-24T09:23:36.359247 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   - task3_database (0.1.0)
+I, [2017-08-24T09:23:36.375020 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   - mysql (8.4.0)
+I, [2017-08-24T09:23:36.388518 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Installing Cookbook Gems:
+I, [2017-08-24T09:23:36.388645 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Compiling Cookbooks...
+I, [2017-08-24T09:23:36.409272 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Converging 4 resources
+I, [2017-08-24T09:23:36.409364 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Recipe: task3_database::default
+I, [2017-08-24T09:23:39.945868 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   * execute[mysql-community-repo] action run
+I, [2017-08-24T09:23:39.945968 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - execute yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm -y
+I, [2017-08-24T09:23:57.228331 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   * yum_package[net-tools] action install
+I, [2017-08-24T09:23:57.228436 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - install version 2.0-0.17.20131004git.el7 of package net-tools
+I, [2017-08-24T09:23:57.238197 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   * mysql_service[default] action create
+I, [2017-08-24T09:23:57.258012 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     * mysql_server_installation_package[default] action install
+I, [2017-08-24T09:25:16.949933 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * yum_package[mysql-community-server] action install
+I, [2017-08-24T09:25:16.950078 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - install version 5.7.19-1.el7 of package mysql-community-server
+I, [2017-08-24T09:25:16.950128 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * yum_package[perl-Sys-Hostname-Long] action nothing (skipped due to action :nothing)
+I, [2017-08-24T09:25:16.950192 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * execute[Initial DB setup script] action nothing (skipped due to action :nothing)
+I, [2017-08-24T09:25:16.950234 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     
+I, [2017-08-24T09:25:16.982324 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     * mysql_service_manager_systemd[default] action create
+I, [2017-08-24T09:25:17.006820 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * group[mysql] action create (up to date)
+I, [2017-08-24T09:25:17.006908 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * linux_user[mysql] action create (up to date)
+I, [2017-08-24T09:25:17.082345 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * service[mysql] action stop (up to date)
+I, [2017-08-24T09:25:17.173004 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * service[mysql] action disable
+I, [2017-08-24T09:25:17.173121 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - disable service service[mysql]
+I, [2017-08-24T09:25:17.173155 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * file[/etc/mysql/my.cnf] action delete (up to date)
+I, [2017-08-24T09:25:17.173181 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * file[/etc/my.cnf] action delete
+I, [2017-08-24T09:25:17.173215 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - delete file /etc/my.cnf
+I, [2017-08-24T09:25:17.173261 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * link[/usr/share/my-default.cnf] action create
+I, [2017-08-24T09:25:17.173287 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create symlink at /usr/share/my-default.cnf to /etc/mysql-default/my.cnf
+I, [2017-08-24T09:25:17.173347 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * directory[/etc/mysql-default] action create
+I, [2017-08-24T09:25:17.174215 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new directory /etc/mysql-default
+I, [2017-08-24T09:25:17.174296 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0750'
+I, [2017-08-24T09:25:17.174339 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'mysql'
+I, [2017-08-24T09:25:17.234109 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'mysql'
+I, [2017-08-24T09:25:17.234215 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * directory[/etc/mysql-default/conf.d] action create
+I, [2017-08-24T09:25:17.234535 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new directory /etc/mysql-default/conf.d
+I, [2017-08-24T09:25:17.234585 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0750'
+I, [2017-08-24T09:25:17.234618 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'mysql'
+I, [2017-08-24T09:25:17.234649 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'mysql'
+I, [2017-08-24T09:25:17.234678 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * directory[/var/run/mysql-default] action create
+I, [2017-08-24T09:25:17.234707 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new directory /var/run/mysql-default
+I, [2017-08-24T09:25:17.234740 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0755'
+I, [2017-08-24T09:25:17.234770 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'mysql'
+I, [2017-08-24T09:25:17.234799 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'mysql'
+I, [2017-08-24T09:25:17.234829 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * directory[/var/log/mysql-default] action create
+I, [2017-08-24T09:25:17.234858 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new directory /var/log/mysql-default
+I, [2017-08-24T09:25:17.234896 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0750'
+I, [2017-08-24T09:25:17.234955 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'mysql'
+I, [2017-08-24T09:25:17.234985 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'mysql'
+I, [2017-08-24T09:25:17.237962 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * directory[/var/lib/mysql-default] action create
+I, [2017-08-24T09:25:17.238019 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new directory /var/lib/mysql-default
+I, [2017-08-24T09:25:17.238063 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0750'
+I, [2017-08-24T09:25:17.238096 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'mysql'
+I, [2017-08-24T09:25:17.238149 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'mysql'
+I, [2017-08-24T09:25:17.320994 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * template[/etc/mysql-default/my.cnf] action create
+I, [2017-08-24T09:25:17.353272 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new file /etc/mysql-default/my.cnf
+I, [2017-08-24T09:25:17.353390 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - update content in file /etc/mysql-default/my.cnf from none to db0dc2
+I, [2017-08-24T09:25:17.353461 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  --- /etc/mysql-default/my.cnf	2017-08-24 07:25:17.318710316 +0100
+I, [2017-08-24T09:25:17.353509 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +++ /etc/mysql-default/.chef-my20170824-12589-h5n4rq.cnf	2017-08-24 07:25:17.318710316 +0100
+I, [2017-08-24T09:25:17.353559 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  @@ -1 +1,23 @@
+I, [2017-08-24T09:25:17.353612 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +# Chef generated my.cnf for instance mysql-default
+I, [2017-08-24T09:25:17.353654 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:17.353699 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +[client]
+I, [2017-08-24T09:25:17.353741 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +default-character-set          = utf8
+I, [2017-08-24T09:25:17.353789 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +port                           = 3306
+I, [2017-08-24T09:25:17.353831 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +socket                         = /var/run/mysql-default/mysqld.sock
+I, [2017-08-24T09:25:17.353876 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:17.353915 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +[mysql]
+I, [2017-08-24T09:25:17.353960 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +default-character-set          = utf8
+I, [2017-08-24T09:25:17.353999 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:17.354045 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +[mysqld]
+I, [2017-08-24T09:25:17.354087 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +user                           = mysql
+I, [2017-08-24T09:25:17.354155 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +pid-file                       = /var/run/mysql-default/mysqld.pid
+I, [2017-08-24T09:25:17.354198 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +socket                         = /var/run/mysql-default/mysqld.sock
+I, [2017-08-24T09:25:17.354243 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +bind-address                   = 0.0.0.0
+I, [2017-08-24T09:25:17.354285 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +port                           = 3306
+I, [2017-08-24T09:25:17.354330 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +datadir                        = /var/lib/mysql-default
+I, [2017-08-24T09:25:17.354383 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +log-error                      = /var/log/mysql-default/error.log
+I, [2017-08-24T09:25:17.354435 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +!includedir /etc/mysql-default/conf.d
+I, [2017-08-24T09:25:17.354482 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:17.354520 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +[mysqld_safe]
+I, [2017-08-24T09:25:17.354560 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +socket                         = /var/run/mysql-default/mysqld.sock
+I, [2017-08-24T09:25:17.354605 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0600'
+I, [2017-08-24T09:25:17.354645 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'mysql'
+I, [2017-08-24T09:25:17.354683 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'mysql'
+I, [2017-08-24T09:25:23.758579 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * bash[default initial records] action run
+I, [2017-08-24T09:25:23.758733 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - execute "bash"  "/tmp/chef-script20170824-12589-102l7ah"
+I, [2017-08-24T09:25:23.758781 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     
+I, [2017-08-24T09:25:23.758819 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   
+I, [2017-08-24T09:25:23.758857 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   * mysql_service[default] action start
+I, [2017-08-24T09:25:23.763190 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     * mysql_service_manager_systemd[default] action start
+I, [2017-08-24T09:25:23.763268 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * directory[/usr/libexec] action create (up to date)
+I, [2017-08-24T09:25:23.788440 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * template[/usr/libexec/mysql-default-wait-ready] action create
+I, [2017-08-24T09:25:23.788577 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new file /usr/libexec/mysql-default-wait-ready
+I, [2017-08-24T09:25:23.788639 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - update content in file /usr/libexec/mysql-default-wait-ready from none to 7be882
+I, [2017-08-24T09:25:23.788690 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  --- /usr/libexec/mysql-default-wait-ready	2017-08-24 07:25:23.779479685 +0100
+I, [2017-08-24T09:25:23.788744 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +++ /usr/libexec/.chef-mysql-default-wait-ready20170824-12589-1xzb6hi	2017-08-24 07:25:23.779479685 +0100
+I, [2017-08-24T09:25:23.788795 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  @@ -1 +1,31 @@
+I, [2017-08-24T09:25:23.788842 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +#!/bin/sh
+I, [2017-08-24T09:25:23.788891 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:23.788942 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +daemon_pid="$1"
+I, [2017-08-24T09:25:23.788987 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:23.789040 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +# Wait for the server to come up or for the mysqld process to disappear
+I, [2017-08-24T09:25:23.789086 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +ret=0
+I, [2017-08-24T09:25:23.789140 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +while /bin/true; do
+I, [2017-08-24T09:25:23.789193 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        RESPONSE=`/usr/bin/mysqladmin --no-defaults --socket="/var/run/mysql-default/mysqld.sock" --user=UNKNOWN_MYSQL_USER ping 2>&1`
+I, [2017-08-24T09:25:23.789239 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        mret=$?
+I, [2017-08-24T09:25:23.789313 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        if [ $mret -eq 0 ]; then
+I, [2017-08-24T09:25:23.789372 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +            break
+I, [2017-08-24T09:25:23.789429 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        fi
+I, [2017-08-24T09:25:23.789476 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        # exit codes 1, 11 (EXIT_CANNOT_CONNECT_TO_SERVICE) are expected,
+I, [2017-08-24T09:25:23.789527 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        # anything else suggests a configuration error
+I, [2017-08-24T09:25:23.789572 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        if [ $mret -ne 1 -a $mret -ne 11 ]; then
+I, [2017-08-24T09:25:23.789622 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +            ret=1
+I, [2017-08-24T09:25:23.789666 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +            break
+I, [2017-08-24T09:25:23.789714 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        fi
+I, [2017-08-24T09:25:23.789759 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        # "Access denied" also means the server is alive
+I, [2017-08-24T09:25:23.789802 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        echo "$RESPONSE" | grep -q "Access denied for user" && break
+I, [2017-08-24T09:25:23.789851 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:23.789895 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        # Check process still exists
+I, [2017-08-24T09:25:23.789944 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        if ! /bin/kill -0 $daemon_pid 2>/dev/null; then
+I, [2017-08-24T09:25:23.789989 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +            ret=1
+I, [2017-08-24T09:25:23.790031 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +            break
+I, [2017-08-24T09:25:23.790080 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        fi
+I, [2017-08-24T09:25:23.790122 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +        sleep 1
+I, [2017-08-24T09:25:23.790163 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +done
+I, [2017-08-24T09:25:23.790209 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:23.790252 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +exit $ret
+I, [2017-08-24T09:25:23.790294 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0755'
+I, [2017-08-24T09:25:23.790362 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'root'
+I, [2017-08-24T09:25:23.790413 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'root'
+I, [2017-08-24T09:25:23.795634 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * template[/etc/systemd/system/mysql-default.service] action create
+I, [2017-08-24T09:25:23.795718 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new file /etc/systemd/system/mysql-default.service
+I, [2017-08-24T09:25:23.795773 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - update content in file /etc/systemd/system/mysql-default.service from none to 1031dc
+I, [2017-08-24T09:25:23.795818 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  --- /etc/systemd/system/mysql-default.service	2017-08-24 07:25:23.788566562 +0100
+I, [2017-08-24T09:25:23.795866 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +++ /etc/systemd/system/.chef-mysql-default20170824-12589-17acsio.service	2017-08-24 07:25:23.788566562 +0100
+I, [2017-08-24T09:25:23.795908 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  @@ -1 +1,17 @@
+I, [2017-08-24T09:25:23.795955 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +[Unit]
+I, [2017-08-24T09:25:23.795997 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +Description=mysql_service[mysql-default]
+I, [2017-08-24T09:25:23.796042 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +After=syslog.target
+I, [2017-08-24T09:25:23.796093 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +After=network.target
+I, [2017-08-24T09:25:23.796134 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:23.796180 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +[Service]
+I, [2017-08-24T09:25:23.796221 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +Type=simple
+I, [2017-08-24T09:25:23.796260 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +User=mysql
+I, [2017-08-24T09:25:23.796329 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +Group=mysql
+I, [2017-08-24T09:25:23.796372 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +ExecStart=/usr/sbin/mysqld --defaults-file=/etc/mysql-default/my.cnf --basedir=/usr
+I, [2017-08-24T09:25:23.796427 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +ExecStartPost=/usr/libexec/mysql-default-wait-ready $MAINPID
+I, [2017-08-24T09:25:23.796471 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +TimeoutSec=300
+I, [2017-08-24T09:25:23.796511 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +PrivateTmp=true
+I, [2017-08-24T09:25:23.796556 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +
+I, [2017-08-24T09:25:23.796602 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +[Install]
+I, [2017-08-24T09:25:23.796641 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +WantedBy=multi-user.target
+I, [2017-08-24T09:25:23.796686 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0644'
+I, [2017-08-24T09:25:23.796726 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'root'
+I, [2017-08-24T09:25:23.796766 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'root'
+I, [2017-08-24T09:25:23.853898 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * execute[default systemctl daemon-reload] action run
+I, [2017-08-24T09:25:23.854022 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - execute /bin/systemctl daemon-reload
+I, [2017-08-24T09:25:23.854064 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * execute[default systemctl daemon-reload] action nothing (skipped due to action :nothing)
+I, [2017-08-24T09:25:23.860088 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * template[/usr/lib/tmpfiles.d/mysql-default.conf] action create
+I, [2017-08-24T09:25:23.860173 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - create new file /usr/lib/tmpfiles.d/mysql-default.conf
+I, [2017-08-24T09:25:23.860214 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - update content in file /usr/lib/tmpfiles.d/mysql-default.conf from none to 701444
+I, [2017-08-24T09:25:23.860256 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  --- /usr/lib/tmpfiles.d/mysql-default.conf	2017-08-24 07:25:23.855203658 +0100
+I, [2017-08-24T09:25:23.860292 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +++ /usr/lib/tmpfiles.d/.chef-mysql-default20170824-12589-iyy8c5.conf	2017-08-24 07:25:23.855203658 +0100
+I, [2017-08-24T09:25:23.860331 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  @@ -1 +1,2 @@
+I, [2017-08-24T09:25:23.860367 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  +d /var/run/mysql-default 0755 mysql mysql -
+I, [2017-08-24T09:25:23.860407 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change mode from '' to '0644'
+I, [2017-08-24T09:25:23.860451 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change owner from '' to 'root'
+I, [2017-08-24T09:25:23.860507 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - change group from '' to 'root'
+I, [2017-08-24T09:25:23.968284 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * service[mysql-default] action enable
+I, [2017-08-24T09:25:23.968409 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - enable service service[mysql-default]
+I, [2017-08-24T09:25:25.261738 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:       * service[mysql-default] action start
+I, [2017-08-24T09:25:25.261843 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:  - start service service[mysql-default]
+I, [2017-08-24T09:25:25.261879 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     
+I, [2017-08-24T09:25:25.261905 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   
+I, [2017-08-24T09:25:25.388399 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   * bash[create_database] action run
+I, [2017-08-24T09:25:25.388528 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - execute "bash"  "/tmp/chef-script20170824-12589-1x1alzs"
+I, [2017-08-24T09:25:25.438493 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: 
+I, [2017-08-24T09:25:25.438621 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Running handlers:
+I, [2017-08-24T09:25:25.438666 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Running handlers complete
+I, [2017-08-24T09:25:25.438703 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: 
+I, [2017-08-24T09:25:25.438733 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Deprecated features used!
+I, [2017-08-24T09:25:25.438764 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename install_method to new_resource.install_method at 1 location:
+I, [2017-08-24T09:25:25.438794 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb:34:in `installation'
+I, [2017-08-24T09:25:25.438823 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.438852 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename name to new_resource.name at 3 locations:
+I, [2017-08-24T09:25:25.438880 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb:36:in `installation'
+I, [2017-08-24T09:25:25.438908 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb:50:in `svc_manager'
+I, [2017-08-24T09:25:25.438936 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:112:in `initialize_database'
+I, [2017-08-24T09:25:25.438964 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.438992 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename service_manager to new_resource.service_manager at 1 location:
+I, [2017-08-24T09:25:25.439023 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb:48:in `svc_manager'
+I, [2017-08-24T09:25:25.439051 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.439081 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename package_name to new_resource.package_name at 1 location:
+I, [2017-08-24T09:25:25.439109 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb:17:in `block in <class:MysqlServerInstallationPackage>'
+I, [2017-08-24T09:25:25.439137 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.439165 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename package_version to new_resource.package_version at 1 location:
+I, [2017-08-24T09:25:25.439193 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb:18:in `block (2 levels) in <class:MysqlServerInstallationPackage>'
+I, [2017-08-24T09:25:25.439227 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.439255 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename package_options to new_resource.package_options at 1 location:
+I, [2017-08-24T09:25:25.439282 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb:19:in `block (2 levels) in <class:MysqlServerInstallationPackage>'
+I, [2017-08-24T09:25:25.439309 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.439336 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename run_user to new_resource.run_user at 7 locations:
+I, [2017-08-24T09:25:25.439360 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:59:in `block in create_config'
+I, [2017-08-24T09:25:25.439386 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:67:in `block in create_config'
+I, [2017-08-24T09:25:25.439417 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:75:in `block in create_config'
+I, [2017-08-24T09:25:25.439443 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:83:in `block in create_config'
+I, [2017-08-24T09:25:25.439468 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:91:in `block in create_config'
+I, [2017-08-24T09:25:25.439492 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:102:in `block in create_config'
+I, [2017-08-24T09:25:25.439542 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_manager_systemd.rb:73:in `block (2 levels) in <class:MysqlServiceManagerSystemd>'
+I, [2017-08-24T09:25:25.439572 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.439597 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename run_group to new_resource.run_group at 7 locations:
+I, [2017-08-24T09:25:25.439619 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:60:in `block in create_config'
+I, [2017-08-24T09:25:25.439649 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:68:in `block in create_config'
+I, [2017-08-24T09:25:25.439672 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:76:in `block in create_config'
+I, [2017-08-24T09:25:25.439697 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:84:in `block in create_config'
+I, [2017-08-24T09:25:25.439720 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:92:in `block in create_config'
+I, [2017-08-24T09:25:25.439741 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:103:in `block in create_config'
+I, [2017-08-24T09:25:25.439767 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_manager_systemd.rb:74:in `block (2 levels) in <class:MysqlServiceManagerSystemd>'
+I, [2017-08-24T09:25:25.439795 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.439817 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename include_dir to new_resource.include_dir at 1 location:
+I, [2017-08-24T09:25:25.439842 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:66:in `create_config'
+I, [2017-08-24T09:25:25.439865 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.440904 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename data_dir to new_resource.data_dir at 2 locations:
+I, [2017-08-24T09:25:25.440938 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:90:in `create_config'
+I, [2017-08-24T09:25:25.440966 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_base.rb:116:in `block in initialize_database'
+I, [2017-08-24T09:25:25.440990 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.441013 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:   rename instance to new_resource.instance at 2 locations:
+I, [2017-08-24T09:25:25.441041 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_manager_systemd.rb:54:in `block (2 levels) in <class:MysqlServiceManagerSystemd>'
+I, [2017-08-24T09:25:25.441087 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:     - /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service_manager_systemd.rb:59:in `block in <class:MysqlServiceManagerSystemd>'
+I, [2017-08-24T09:25:25.441110 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2017-08-24T09:25:25.441132 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: 
+I, [2017-08-24T09:25:25.441154 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Chef Client finished, 25/33 resources updated in 01 minutes 50 seconds
+I, [2017-08-24T09:25:25.552974 #1702]  INFO -- default-sbeliakou-centos-73-x86-64-minimal: Finished converging <default-sbeliakou-centos-73-x86-64-minimal> (1m53.15s).
