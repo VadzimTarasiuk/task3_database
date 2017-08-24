@@ -1,0 +1,21 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/). Note that
+0.x versions may be breaking, per the semver standard.
+
+## Unreleased
+
+## 1.1.0 (2017-08-15)
+
+* [INTERNAL] Use converge_by instead of updated_by_last_action to trigger
+  notification_trigger
+* Support Chef 13, drop support for ancient Chef 12, exclude build-time files from
+  generated cookbook.
+
+## 1.0.0 (not released officially)
+* [FEATURE] `notification_trigger` resource to trigger notifications
+* [FEATURE] Helper for the ingenerator_project_name which must be defined in a role
+  before use
+* [FEATURE] Add simple attribute helpers for common cases where we want to reject
+  non-customised or legacy attribute definitions
+* [FEATURE] Helpers for our node_environment options
